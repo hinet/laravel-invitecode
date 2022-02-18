@@ -13,13 +13,13 @@
             "src/Libs/Hashids.php"
         ],
         "psr-4": {
-            "Hinet\\Invitecode\\": "src/"
+            "Hinet\\InviteCode\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Hinet\\Invitecode\\InviteCodeProvider"
+                "Hinet\\InviteCode\\InviteCodeProvider"
             ],
             "aliases": {
                 "InviteCode": "Hinet\\InviteCode\\Facades"
