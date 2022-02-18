@@ -13,7 +13,7 @@ class InviteCodeProvider extends ServiceProvider
      */
     public function register()
     {        
-        $this->app->singleton('invite', function ($app) {
+        $this->app->singleton('InviteCode', function ($app) {
             return new InviteCode($app['config']);
         });
     }
