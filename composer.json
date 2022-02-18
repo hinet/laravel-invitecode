@@ -22,7 +22,7 @@
                 "Hinet\\InviteCode\\InviteCodeProvider"
             ],
             "aliases": {
-                "InviteCode": "Hinet\\InviteCode\\Facades"
+                "InviteCode": "Hinet\\InviteCode\\Facades\\InviteCode"
             }
         }
     },
