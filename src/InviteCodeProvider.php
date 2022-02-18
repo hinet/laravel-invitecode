@@ -27,6 +27,6 @@ class InviteCodeProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/config.php' => config_path('invite.php'),
-        ]);
+        ],'invitecode');
     }
 }

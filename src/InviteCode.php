@@ -13,10 +13,10 @@ class InviteCode{
 
     public function __construct(Repository $config){
         $this->config = $config->get('invite');
-	$salt = $this->config['salt'];
-	if(empty($salt)){
-		$salt = env('APP_KEY');
-	}
+        $salt = $this->config['salt'];
+        if(empty($salt)){
+            $salt = env('APP_KEY');
+        }
         $this->hashIds = new Hashids($salt,$this->config['length'],$this->config['char']);
     }
     /**
@@ -30,10 +30,10 @@ class InviteCode{
      */
     private function deCode($code){
         $code = $this->hash->decode($code);
-	if(is_array($code)){
-		return current($code);
-	}else{
-		return $code;
-	}
+        if(is_array($code)){
+            return current($code);
+        }else{
+            return $code;
+        }
     }
 }
