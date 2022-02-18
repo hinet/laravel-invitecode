@@ -11,7 +11,7 @@ composer require hinet/laravel-invitecode
 ## 配置
 
 ```
-php artisan vendor:publish --tag=laravel-invitecode
+php artisan vendor:publish --tag=invitecode
 ```
 
 修改config/invite.php自定义你的配置  
