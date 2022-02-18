@@ -13,7 +13,11 @@ class InviteCode{
 
     public function __construct(Repository $config){
         $this->config = $config->get('invite');
-        $this->hashIds = new Hashids($this->config['salt'],$this->config['length'],$this->config['char']);
+	$salt = $this->config['salt'];
+	if(empty($salt)){
+		$salt = env('APP_KEY');
+	}
+        $this->hashIds = new Hashids($salt,$this->config['length'],$this->config['char']);
     }
     /**
      * 生成邀请码
@@ -26,10 +30,10 @@ class InviteCode{
      */
     private function deCode($code){
         $code = $this->hash->decode($code);
-		if(is_array($code)){
-			return current($code);
-		}else{
-			return $code;
-		}
+	if(is_array($code)){
+		return current($code);
+	}else{
+		return $code;
+	}
     }
 }
