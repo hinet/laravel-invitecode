@@ -23,13 +23,13 @@ class InviteCode{
      * 生成邀请码
      */
     public function enCode($id){
-        return $this->hash->encode($id);
+        return $this->hashIds->encode($id);
     }
     /**
      * 根据邀请码获取用户ID
      */
     public function deCode($code){
-        $code = $this->hash->decode($code);
+        $code = $this->hashIds->decode($code);
         if(is_array($code)){
             return current($code);
         }else{
