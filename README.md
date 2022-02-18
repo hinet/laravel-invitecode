@@ -23,3 +23,19 @@ return   [
     'salt' => '',//加密KEY,默认使用APP_KEY
 ];
 ```
+
+## 使用示例
+
+```php
+namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
+use InviteCode;
+class DemoController extends Controller{
+    public function index(){
+        echo InviteCode::enCode(123);
+        //print NDZ0kA
+        //echo echo InviteCode::deCode('NDZ0kA');
+        //print 123
+    }
+}
+```
