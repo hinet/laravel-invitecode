@@ -1,0 +1,27 @@
+{
+    "name": "hinet/laravel-invitecode",
+    "description": "invite code for laravel",
+    "keywords": ["invite code", "laravel"],
+    "type": "compoer-plugin",
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "8.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "classmap": [
+            "src/Libs/HashGenerator.php",
+            "src/Libs/Hashids.php"
+        ],
+        "psr-4": {
+            "Hinet\\Invitecode\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hinet",
+            "email": "63603636@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
