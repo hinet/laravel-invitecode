@@ -12,7 +12,7 @@ class InviteCode{
     private $hashIds;
 
     public function __construct(Repository $config){
-        $this->config = $config->get('invite');
+        $this->config = $config->get('invitecode');
         $salt = $this->config['salt'];
         if(empty($salt)){
             $salt = env('APP_KEY');
