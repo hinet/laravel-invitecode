@@ -1,5 +1,5 @@
 <?php
-namespace Hinet\Invitecode;
+namespace Hinet\InviteCode;
 
 use Hashids;
 use Illuminate\Config\Repository;
