@@ -13,3 +13,13 @@ composer require hinet/laravel-invitecode
 ```
 php artisan vendor:publish --tag=laravel-invitecode
 ```
+
+修改config/invite.php自定义你的配置  
+```php
+
+return   [
+    'length' => 'png', //验证码长度
+    'char' => '',//生成验证码的字符(不能包括0),默认a-zA-Z1-9
+    'salt' => env('APP_KEY'),//加密KEY
+];
+```
