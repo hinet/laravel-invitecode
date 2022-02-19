@@ -18,8 +18,8 @@ php artisan vendor:publish --tag=invitecode
 ```php
 
 return   [
-    'length' => 6, //验证码长度
-    'char' => '',//生成验证码的字符(不能包括0),默认a-zA-Z1-9
+    'length' => 6, //邀请码长度
+    'char' => '',//生成邀请码的字符(不包括0),默认a-zA-Z1-9
     'salt' => '',//加密KEY,默认使用APP_KEY
 ];
 ```
