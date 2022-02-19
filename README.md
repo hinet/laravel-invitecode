@@ -19,8 +19,8 @@ php artisan vendor:publish --tag=invitecode
 
 return   [
     'length' => 6, //邀请码长度
-    'char' => '',//生成邀请码的字符(不包括0),默认a-zA-Z1-9
-    'salt' => '',//加密KEY,默认使用APP_KEY
+    'char' => '',//生成邀请码的字符,默认a-zA-Z0-9
+    'salt' => '',//加密盐,默认使用APP_KEY
 ];
 ```
 
